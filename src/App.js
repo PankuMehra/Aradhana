@@ -1,16 +1,52 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import React, { useRef } from "react";
+import { Routes, Route } from "react-router-dom";
+import AppLayout from "./component/Main/AppLayout";
+import MoreAboutUs from "./component/Pages/About/MoreAboutUs";
 import Main from "./component/Main/Main";
+import ContactUs from "./component/Pages/ContactUs/ContactUS";
 
-function App() {
+const App = () => {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const zafersRef = useRef(null);
+  const zafsRef = useRef(null);
+  const blogRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Main />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <AppLayout
+            homeRef={homeRef}
+            aboutRef={aboutRef}
+            zafersRef={zafersRef}
+            zafsRef={zafsRef}
+            blogRef={blogRef}
+            contactRef={contactRef}
+          />
+        }
+      >
+        <Route
+          index
+          element={
+            <Main
+              homeRef={homeRef}
+              aboutRef={aboutRef}
+              zafersRef={zafersRef}
+              zafsRef={zafsRef}
+              blogRef={blogRef}
+              contactRef={contactRef}
+        
+            />
+          }
+        />
+        <Route path="about" element={<MoreAboutUs />} />
+        <Route path="contact" element={<ContactUs />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

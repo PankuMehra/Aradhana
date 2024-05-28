@@ -8,19 +8,28 @@ const Home = () => {
       <Box
         sx={{
           position: "absolute",
-          top: { xs: "-140px", sm: "-150px", md: "-200px" },
+          top: { xs: "-120px", sm: "-120px", md: "-120px" },
           filter: "brightness(50%)",
           zIndex: "-1",
           width: "100%",
+          height: "800px",
         }}
       >
-        <img alt="Home" src={HomeBG} width="100%" />
+        <img
+          alt="Home"
+          src={HomeBG}
+          width="100%"
+          style={{
+            objectFit: "cover",
+            height: "100%",
+          }}
+        />
       </Box>
       <Box
         sx={{
           display: "grid",
           gap: { xs: 1, sm: 2, md: 3, lg: 6 },
-          width: { xs: "100%", md: "100%", lg: "85%" },
+          // width: { xs: "100%", md: "100%", lg: "85%" },
           p: { xs: "20px", sm: "40px", md: "60px", lg: "120px" },
         }}
       >
@@ -49,7 +58,6 @@ const Home = () => {
             fontSize: { xs: "16px", sm: "20px", md: "24px", lg: "28px" },
             fontWeight: 400,
             color: "#FFFFFF",
-            display: { xs: "none", md: "block" },
           }}
         >
           Since 1974, India's Top Tea Cafe serves quality chai, verse snacks and

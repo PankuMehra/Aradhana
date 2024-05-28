@@ -1,8 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import AboutOldMan from "../../Common/assets/Images/About_old_man.png";
+import AboutOldMan from "../../Common/assets/Images/About/About_old_man.png";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -163,6 +166,7 @@ const About = () => {
                 backgroundColor: "#d75f1e",
               },
             }}
+            onClick={() => navigate("/about")}
           >
             Read More
           </Button>

@@ -11,6 +11,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { Logo } from "../../assets/Icons";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = ({
   homeRef,
@@ -22,6 +23,9 @@ const Navbar = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +45,17 @@ const Navbar = ({
   }, []);
 
   const handleNavClick = (ref) => {
+    if (location.pathname !== "/") {
+      navigate("/", { replace: true });
+      setTimeout(() => {
+        scrollToRef(ref);
+      }, 100);
+    } else {
+      scrollToRef(ref);
+    }
+  };
+
+  const scrollToRef = (ref) => {
     window.scrollTo({
       top: ref.current.offsetTop - 180,
       behavior: "smooth",
@@ -66,19 +81,19 @@ const Navbar = ({
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        bgcolor: isScrolled ? "rgba(0, 0, 0, 0.6)" : "transparent",
+        bgcolor: isScrolled ? "rgba(0, 0, 0, 0.5)" : "transparent",
         p: isScrolled
           ? {
-              xs: "25px 40px",
-              sm: "25px 55px",
-              md: "35px 70px",
-              lg: "50px 140px",
+              xs: "15px 30px",
+              sm: "15px 45px",
+              md: "15px 60px",
+              lg: "15px 120px",
             }
           : {
-              xs: "20px 30px",
-              sm: "20px 50px",
-              md: "30px 60px",
-              lg: "40px 120px",
+              xs: "10px 25px",
+              sm: "10px 40px",
+              md: "10px 50px",
+              lg: "10px 110px",
             },
         position: "sticky",
         top: 0,

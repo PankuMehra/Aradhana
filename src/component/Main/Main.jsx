@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import React, { useRef } from "react";
-import Navbar from "../Common/UI/Navbar/Navbar";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Explore from "../Pages/Explore/Explore";
@@ -9,26 +8,17 @@ import Zafs from "../Pages/Zafs/Zafs";
 import Insta from "../Pages/Insta/Insta";
 import Reviews from "../Pages/Reviews/Reviews";
 import Delivery from "../Pages/Delivery/Delivery";
-import Footer from "../Common/UI/Footer/Footer";
 
-const Main = () => {
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const zafersRef = useRef(null);
-  const zafsRef = useRef(null);
-  const blogRef = useRef(null);
-  const contactRef = useRef(null);
-
+const Main = ({
+  homeRef,
+  aboutRef,
+  zafersRef,
+  zafsRef,
+  blogRef,
+  contactRef,
+}) => {
   return (
     <Box>
-      <Navbar
-        homeRef={homeRef}
-        aboutRef={aboutRef}
-        zafersRef={zafersRef}
-        zafsRef={zafsRef}
-        blogRef={blogRef}
-        contactRef={contactRef}
-      />
       <Box ref={homeRef}>
         <Home />
       </Box>
@@ -52,9 +42,6 @@ const Main = () => {
       </Box>
       <Box ref={contactRef}>
         <Delivery />
-      </Box>
-      <Box>
-        <Footer />
       </Box>
     </Box>
   );
