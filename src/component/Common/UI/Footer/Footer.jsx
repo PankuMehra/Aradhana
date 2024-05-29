@@ -110,6 +110,8 @@ const Footer = () => {
         <Box
           sx={{
             display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: "center",
             justifyContent: { xs: "center", md: "flex-start" },
             gap: "30px",
           }}

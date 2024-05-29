@@ -45,7 +45,9 @@ const Navbar = ({
   }, []);
 
   const handleNavClick = (ref) => {
-    if (location.pathname !== "/") {
+    if (ref === contactRef) {
+      navigate("/contact");
+    } else if (location.pathname !== "/") {
       navigate("/", { replace: true });
       setTimeout(() => {
         scrollToRef(ref);
