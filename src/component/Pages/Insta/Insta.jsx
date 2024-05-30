@@ -11,7 +11,8 @@ import Insta7 from "../../Common/assets/Images/Insta/Insta7.png";
 import Insta8 from "../../Common/assets/Images/Insta/Insta8.png";
 import { Link } from "react-router-dom";
 
-const images = [Insta1, Insta1, Insta1, Insta1];
+const images1 = [Insta1, Insta2, Insta3, Insta4];
+const images2 = [Insta5, Insta6, Insta7, Insta8];
 
 const Insta = () => {
   return (
@@ -83,7 +84,7 @@ const Insta = () => {
               gap: "20px",
             }}
           >
-            {images.map((src, index) => (
+            {images1.map((src, index) => (
               <img
                 key={index}
                 alt="InstaImage"
@@ -104,7 +105,7 @@ const Insta = () => {
               top: "-150px",
             }}
           >
-            {images.map((src, index) => (
+            {images2.map((src, index) => (
               <img
                 key={index}
                 alt="InstaImage"
@@ -123,7 +124,7 @@ const Insta = () => {
               gap: "20px",
             }}
           >
-            {images.map((src, index) => (
+            {images1.map((src, index) => (
               <img
                 key={index}
                 alt="InstaImage"
@@ -144,7 +145,7 @@ const Insta = () => {
               top: "-150px",
             }}
           >
-            {images.map((src, index) => (
+            {images2.map((src, index) => (
               <img
                 key={index}
                 alt="InstaImage"

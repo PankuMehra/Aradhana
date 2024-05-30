@@ -4,6 +4,7 @@ import AppLayout from "./component/Main/AppLayout";
 import MoreAboutUs from "./component/Pages/About/MoreAboutUs";
 import Main from "./component/Main/Main";
 import ContactUs from "./component/Pages/ContactUs/ContactUS";
+import ZafersMore from "./component/Pages/Zafers/ZafersMore";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -44,6 +45,7 @@ const App = () => {
         />
         <Route path="about" element={<MoreAboutUs />} />
         <Route path="contact" element={<ContactUs />} />
+        <Route path="zafers" element={<ZafersMore />} />
       </Route>
     </Routes>
   );
