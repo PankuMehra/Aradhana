@@ -1,15 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import ZaferBG from "../../Common/assets/Images/Zafers/Zafer_BG.jpg";
-import Zafs_packet from "../../Common/assets/Images/Zafs/Zafs_packet.png";
 import mission from "../../Common/assets/Images/Zafers/mission.png";
 import Corousel from "../../Common/UI/Corousel";
+import zaf from "../../Common/assets/Images/Zafs/zaf.jpg";
 import deliveryboy from "../../Common/assets/Images/Zafers/dilveryboy.png";
 import zomato from "../../Common/assets/Images/Zafers/zomato-logo.png";
 import swiggy from "../../Common/assets/Images/Zafers/swiggy-logo.png";
-// import TestimonialCard from "./TestimonialCard";
 
-const ZafersMore = () => {
+const ZafsMore = () => {
   return (
     <>
       <Box
@@ -25,7 +24,7 @@ const ZafersMore = () => {
             filter: "brightness(90%)",
             zIndex: "-1",
             width: "100%",
-            height: { xs: "1200px", sm: "1000px", md: "800px" },
+            height: { xs: "1200px", sm: "1000px", md: "800" },
           }}
         >
           <img
@@ -40,13 +39,14 @@ const ZafersMore = () => {
         </Box>
         <Box
           sx={{
-            p: { xs: "30px", sm: "50px", md: "70px" },
+            // width: "100%",
+            p: { xs: "20px", sm: "40px", md: "60px" },
             mb: { xs: "140px", sm: "120px", md: "100px" },
           }}
         >
           <Typography
             sx={{
-              fontSize: { xs: "24px", md: "30px" },
+              fontSize: { xs: "30px", md: "16px" },
               fontWeight: 600,
               color: "#ed641a",
             }}
@@ -61,7 +61,7 @@ const ZafersMore = () => {
               mb: "25px",
             }}
           >
-            Zafar Tea
+            Zaf's
           </Typography>
           <Typography
             sx={{
@@ -71,11 +71,7 @@ const ZafersMore = () => {
               mb: "25px",
             }}
           >
-            When it comes to vibing with a beverage in India, it has to be chai.
-            At Zafar, we blend tradition, joy, and taste to unite communities
-            with love. From classic chai to exotic herbal infusions, each sip at
-            Zafar is filled with freshness, flavor that you find difficult to
-            resist.
+            At Zaf, tea is not just a beverage; it's an art form.
           </Typography>
           <Typography
             sx={{
@@ -85,10 +81,24 @@ const ZafersMore = () => {
               mb: "25px",
             }}
           >
-            We are more than just a tea cafe; we endeavor to serve an experience
-            to help friends connect, families unwind, and individuals find
-            solace. Step into the soothing ambiance and attentive service that
-            feels like a home away from home.
+            Welcome to Zaf, where passion meets perfection in every sip. Rooted
+            in a passion for tea, Zaf is more than a brand, but an experience
+            dedicated to cherishing moments of joy with the aroma of tea. Join
+            us on a journey where tradition meets innovation, and the art of tea
+            is celebrated with every sip.
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "18px",
+              fontWeight: 400,
+              color: "#FFFFFF",
+              mb: "25px",
+            }}
+          >
+            With a rich heritage rooted in the ancient traditions of tea, we
+            blend different tea flavors with modern flair to bring you an
+            exceptional tea experience. From the lush tea gardens to your cup,
+            our process is infused with dedication and expertise.
           </Typography>
         </Box>
       </Box>
@@ -97,6 +107,7 @@ const ZafersMore = () => {
           background: "#ED641A",
           position: "relative",
           height: "400px",
+          width: "100%",
         }}
       >
         <Corousel />
@@ -115,7 +126,7 @@ const ZafersMore = () => {
         <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <img
             alt="Home"
-            src={Zafs_packet}
+            src={zaf}
             width="100%"
             height="450px"
             style={{
@@ -139,19 +150,29 @@ const ZafersMore = () => {
               color: "#FFFFFC",
             }}
           >
-            <span style={{ color: "#ED641A" }}>Our</span> Story
+            <span style={{ color: "#ED641A" }}>Why</span> Zaf?
           </Typography>
           <Box sx={{ paddingRight: { md: "30px" } }}>
             <Typography
-              sx={{ color: "white", fontSize: { xs: "16px", md: "20px" } }}
+              sx={{
+                color: "white",
+                fontSize: { xs: "16px", md: "20px" },
+                mb: "25px",
+              }}
             >
-              Our journey began with a goal to create a space that holds the
-              essence of tradition with a concept to offer a space to unite
-              people and help them value every moment. Beginning with a
-              beautiful tea outlet built with a passion for exceptional tea
-              lovers, today we cherish every individuals chai moments whether it
-              is deep conversation, fun moments for friends or just a comforting
-              space to embrace every sip peacefully.
+              Step into a Zaf store, and you'll instantly feel the inviting
+              warmth and energy that defines our brand. Our space is designed to
+              be your go-to comforting space for tea lovers, where you can
+              immerse yourself in the world of exclusive tea flavors and
+              delightful aromas. Whether you're seeking a moment of vibrant
+              social setting, or a place to unwind with fresh aroma, Zaf offers
+              a cozy place for all tea lovers.
+            </Typography>
+            <Typography sx={{ color: "white", fontSize: "20px" }}>
+              Our artist curates a diverse range of teas, sourcing the finest
+              leaves from around the globe. From classic black teas to exotic
+              herbal infusions, each blend includes fresh flavors, carefully
+              crafted to meet your taste buds and elevate your tea experience.
             </Typography>
           </Box>
         </Box>
@@ -192,16 +213,18 @@ const ZafersMore = () => {
                 color: "#000",
               }}
             >
-              <span style={{ color: "#ED641A" }}>Our</span> Mission
+              <span style={{ color: "#ED641A" }}>Our</span> Products
             </Typography>
-            <Box sx={{ paddingRight: { md: "30px" } }}>
+            <Box sx={{ paddingRight: "30px" }}>
               <Typography
                 sx={{ color: "#151515", fontSize: { xs: "16px", md: "20px" } }}
               >
-                We look forward to elevate your tea experience by combining
-                tradition with flavorful options. We aim to create a space where
-                every sip of tea and every bite of our delightful snacks speaks
-                of cultural richness with comforting space for all chai lovers.
+                Experience the convenience of Zaf's ready-to-make tea products
+                that bring the art of tea brewing at your fingertips. Our
+                innovative tea solutions are designed for the modern tea
+                enthusiast who values both quality and convenience. Elevate your
+                tea rituals with Zaf's premium tea offerings, making every
+                moment count with flavorful sips.
               </Typography>
             </Box>
           </Box>
@@ -254,17 +277,16 @@ const ZafersMore = () => {
                 color: "#000",
               }}
             >
-              <span style={{ color: "#ED641A" }}>Our</span> Vision
+              <span style={{ color: "#ED641A" }}>Join the</span> Zaf Community
             </Typography>
-            <Box sx={{ paddingRight: { md: "30px" } }}>
+            <Box sx={{ paddingRight: "30px" }}>
               <Typography
                 sx={{ color: "#151515", fontSize: { xs: "16px", md: "20px" } }}
               >
-                Our vision is to redefine experiences linked with serving tea.
-                We aspire to craft a space where tea is not just a beverage but
-                a shared moment of connection, and conversations. We invite you
-                to embark on a flavorful adventure to redefine your chai moments
-                one cup at a time.
+                At Zaf, we believe in fostering a global community of tea lovers
+                who appreciate the beauty and diversity of tea. Become part of
+                the Zaf family as we embark on a journey to serve exceptional
+                experience with your cup of tea.
               </Typography>
             </Box>
           </Box>
@@ -296,8 +318,8 @@ const ZafersMore = () => {
             <img
               alt="deliveryboy_logo"
               src={deliveryboy}
-              width={"100%"}
-              height={"250px"}
+              width="100%"
+              height="250px"
               style={{
                 objectFit: "contain",
               }}
@@ -347,4 +369,4 @@ const ZafersMore = () => {
   );
 };
 
-export default ZafersMore;
+export default ZafsMore;

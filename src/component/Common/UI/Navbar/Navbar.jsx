@@ -47,6 +47,10 @@ const Navbar = ({
   const handleNavClick = (ref) => {
     if (ref === contactRef) {
       navigate("/contact");
+    } else if (ref === zafersRef) {
+      navigate("/zafers");
+    } else if (ref === zafsRef) {
+      navigate("/zafs");
     } else if (location.pathname !== "/") {
       navigate("/", { replace: true });
       setTimeout(() => {
