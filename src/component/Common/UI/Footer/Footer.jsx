@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import FooterLogo from "../../assets/Images/FooterLogo.png";
 import { FacebookLogo, InstaLogo, LinkedinLogo } from "../../assets/Icons";
@@ -12,11 +12,53 @@ const Footer = () => {
         p: {
           xs: "20px",
           sm: "40px",
-          lg: "70px 100px",
-          xl: "70px 140px",
+          lg: "60px",
         },
       }}
     >
+      <Box
+        sx={{
+          display: { xs: "grid", sm: "flex" },
+          gap: { xs: 2, sm: 8 },
+          mb: 5,
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "25px",
+            fontWeight: "600",
+            color: "#ED641A",
+            my: "30px",
+            textTransform: "uppercase",
+            textAlign: { xs: "center", md: "unset" },
+          }}
+        >
+          Follow Us
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: "center",
+            justifyContent: { xs: "center", md: "flex-start" },
+            gap: "30px",
+          }}
+        >
+          <Link
+            href="https://www.instagram.com/aradhanahospitality"
+            target="_blank"
+          >
+            <InstaLogo />
+          </Link>
+          <Link href="https://www.facebook.com/aradhanahospitality">
+            <FacebookLogo />
+          </Link>
+          <Link href="https://www.linkedin.com/company/aradhanahospitality">
+            <LinkedinLogo />
+          </Link>
+        </Box>
+      </Box>
+      <Divider sx={{ bgcolor: "#ffffff" }} />
       <Box
         sx={{
           display: "flex",
@@ -24,15 +66,13 @@ const Footer = () => {
             xs: "column",
             md: "row",
           },
-          justifyContent: "space-between",
+          justifyContent: "flex-start",
           alignItems: {
             xs: "center",
-            md: "flex-start",
+            md: "center",
           },
-          mb: {
-            xs: "20px",
-            md: "0",
-          },
+          gap: 8,
+          mt: 5,
         }}
       >
         <img
@@ -57,12 +97,12 @@ const Footer = () => {
               xs: "column",
               md: "row",
             },
-            justifyContent: "space-around",
+            justifyContent: "flex-start",
             alignItems: "center",
             textTransform: "uppercase",
             gap: {
               xs: "10px",
-              md: "0",
+              md: 4,
             },
           }}
         >
@@ -92,42 +132,6 @@ const Footer = () => {
               {text}
             </Link>
           ))}
-        </Box>
-      </Box>
-      <Box>
-        <Typography
-          sx={{
-            fontSize: "32px",
-            fontWeight: "600",
-            color: "#ED641A",
-            my: "30px",
-            textTransform: "uppercase",
-            textAlign: { xs: "center", md: "unset" },
-          }}
-        >
-          Follow Us
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            alignItems: "center",
-            justifyContent: { xs: "center", md: "flex-start" },
-            gap: "30px",
-          }}
-        >
-          <Link
-            href="https://www.instagram.com/aradhanahospitality/"
-            target="_blank"
-          >
-            <InstaLogo />
-          </Link>
-          <Link href="#">
-            <FacebookLogo />
-          </Link>
-          <Link href="#">
-            <LinkedinLogo />
-          </Link>
         </Box>
       </Box>
     </Box>

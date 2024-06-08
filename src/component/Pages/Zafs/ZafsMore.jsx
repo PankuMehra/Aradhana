@@ -7,10 +7,12 @@ import zaf from "../../Common/assets/Images/Zafs/zaf.jpg";
 import deliveryboy from "../../Common/assets/Images/Zafers/dilveryboy.png";
 import zomato from "../../Common/assets/Images/Zafers/zomato-logo.png";
 import swiggy from "../../Common/assets/Images/Zafers/swiggy-logo.png";
+import Home from "../Home/Home";
 
 const ZafsMore = () => {
   return (
     <>
+      <Home />
       <Box
         sx={{
           position: "relative",
@@ -19,7 +21,7 @@ const ZafsMore = () => {
         <Box
           sx={{
             position: "absolute",
-            top: { xs: "-120px", sm: "-120px", md: "-120px" },
+            top: "0px",
             bottom: { xs: "120px", sm: "120px", md: "120px" },
             filter: "brightness(90%)",
             zIndex: "-1",
@@ -177,7 +179,7 @@ const ZafsMore = () => {
           </Box>
         </Box>
       </Box>
-      <Box
+      {/* <Box
         sx={{
           background: "white",
           display: "flex",
@@ -291,7 +293,7 @@ const ZafsMore = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
       <Box
         sx={{
           background: "white",
@@ -299,6 +301,7 @@ const ZafsMore = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          m: { xs: "30px", md: "60px" },
         }}
       >
         <Box

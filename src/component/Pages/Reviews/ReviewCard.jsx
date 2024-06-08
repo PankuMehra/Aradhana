@@ -8,7 +8,7 @@ const ReviewCard = () => {
       sx={{
         border: "3px solid #FFFFFF",
         borderRadius: "40px",
-        width: "30%",
+        width: "50%",
         p: "80px 40px 20px 40px",
         position: "relative",
         display: "flex",

@@ -7,11 +7,13 @@ import Corousel from "../../Common/UI/Corousel";
 import deliveryboy from "../../Common/assets/Images/Zafers/dilveryboy.png";
 import zomato from "../../Common/assets/Images/Zafers/zomato-logo.png";
 import swiggy from "../../Common/assets/Images/Zafers/swiggy-logo.png";
+import Home from "../Home/Home";
 // import TestimonialCard from "./TestimonialCard";
 
 const ZafersMore = () => {
   return (
-    <>
+    <Box>
+      <Home />
       <Box
         sx={{
           position: "relative",
@@ -20,7 +22,7 @@ const ZafersMore = () => {
         <Box
           sx={{
             position: "absolute",
-            top: { xs: "-120px", sm: "-120px", md: "-120px" },
+            top: "0px",
             bottom: { xs: "120px", sm: "120px", md: "120px" },
             filter: "brightness(90%)",
             zIndex: "-1",
@@ -156,7 +158,7 @@ const ZafersMore = () => {
           </Box>
         </Box>
       </Box>
-      <Box
+      {/* <Box
         sx={{
           background: "white",
           display: "flex",
@@ -196,7 +198,10 @@ const ZafersMore = () => {
             </Typography>
             <Box sx={{ paddingRight: { md: "30px" } }}>
               <Typography
-                sx={{ color: "#151515", fontSize: { xs: "16px", md: "20px" } }}
+                sx={{
+                  color: "#151515",
+                  fontSize: { xs: "16px", md: "20px" },
+                }}
               >
                 We look forward to elevate your tea experience by combining
                 tradition with flavorful options. We aim to create a space where
@@ -258,7 +263,10 @@ const ZafersMore = () => {
             </Typography>
             <Box sx={{ paddingRight: { md: "30px" } }}>
               <Typography
-                sx={{ color: "#151515", fontSize: { xs: "16px", md: "20px" } }}
+                sx={{
+                  color: "#151515",
+                  fontSize: { xs: "16px", md: "20px" },
+                }}
               >
                 Our vision is to redefine experiences linked with serving tea.
                 We aspire to craft a space where tea is not just a beverage but
@@ -269,11 +277,11 @@ const ZafersMore = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
       <Box
         sx={{
           background: "white",
-          mb: "30px",
+          m: { xs: "30px", md: "60px" },
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -343,7 +351,7 @@ const ZafersMore = () => {
           </Box>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

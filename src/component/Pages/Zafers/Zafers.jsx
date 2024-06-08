@@ -28,6 +28,7 @@ const Zafers = () => {
           lg: "70px 0px 70px 100px",
           xl: "70px 0px 70px 140px",
         },
+        overflow: "hidden",
       }}
     >
       <Box width={{ xs: "100%", md: "32%" }}>
@@ -79,6 +80,161 @@ const Zafers = () => {
 
       <Box
         sx={{
+          display: "flex",
+          gap: { xs: "8px", sm: "12px", md: "20px" },
+          overflow: "hidden",
+          height: "500px",
+          width: { xs: "100%", md: "60%" },
+          position: "relative",
+          // right: { sm: "0px", md: "-200px", lg: "-150px" },
+        }}
+      >
+        <Box
+          sx={{
+            // height: "560px",
+            overflow: "hidden",
+            borderRadius: "16px",
+          }}
+        >
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gridTemplateRows: "auto auto",
+              gap: { xs: "8px", sm: "12px", md: "20px" },
+            }}
+          >
+            <img
+              alt={"Zafers 1"}
+              src={Zafers1}
+              style={{
+                width: "100%",
+                objectFit: "fill",
+                height: "280px",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+                borderRadius: "16px",
+              }}
+            />
+            <img
+              alt={"Zafers 2"}
+              src={Zafers2}
+              style={{
+                width: "100%",
+                objectFit: "fill",
+                height: "280px",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+                borderRadius: "16px",
+              }}
+            />
+          </Box>
+          <img
+            alt={"Zafers 3"}
+            src={Zafers3}
+            style={{
+              width: "100%",
+              objectFit: "fill",
+              height: "220px",
+              objectFit: "cover",
+              filter: "brightness(80%)",
+              borderRadius: "16px",
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            display: "grid",
+            // gridTemplateColumns: "repeat(2, 1fr)",
+            gridTemplateRows: "auto auto",
+            gap: { xs: "8px", sm: "12px", md: "20px" },
+            height: "520px",
+            overflow: "hidden",
+            borderRadius: "16px",
+          }}
+        >
+          <img
+            alt={"Zafers 4"}
+            src={Zafers4}
+            style={{
+              width: "100%",
+              objectFit: "fill",
+              height: "280px",
+              objectFit: "cover",
+              filter: "brightness(80%)",
+              borderRadius: "16px",
+            }}
+          />
+          <img
+            alt={"Zafers 5"}
+            src={Zafers5}
+            style={{
+              width: "100%",
+              objectFit: "fill",
+              height: "280px",
+              objectFit: "cover",
+              filter: "brightness(80%)",
+              borderRadius: "16px",
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            // height: "560px",
+            overflow: "hidden",
+            borderRadius: "16px",
+            display: { xs: "none", sm: "unset", md: "none", lg: "unset" },
+          }}
+        >
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gridTemplateRows: "auto auto",
+              gap: "20px",
+            }}
+          >
+            <img
+              alt={"Zafers 6"}
+              src={Zafers6}
+              style={{
+                width: "100%",
+                objectFit: "fill",
+                height: "280px",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+                borderRadius: "16px",
+              }}
+            />
+            <img
+              alt={"Zafers 7"}
+              src={Zafers7}
+              style={{
+                width: "100%",
+                objectFit: "fill",
+                height: "280px",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+                borderRadius: "16px",
+              }}
+            />
+          </Box>
+          <img
+            alt={"Zafers 8"}
+            src={Zafers8}
+            style={{
+              width: "100%",
+              objectFit: "fill",
+              height: "220px",
+              objectFit: "cover",
+              filter: "brightness(80%)",
+              borderRadius: "16px",
+            }}
+          />
+        </Box>
+      </Box>
+      {/* <Box
+        sx={{
           width: { xs: "100%", md: "60%" },
           display: "grid",
           gridTemplateColumns: {
@@ -113,7 +269,7 @@ const Zafers = () => {
             />
           </Box>
         ))}
-      </Box>
+      </Box> */}
     </Box>
   );
 };

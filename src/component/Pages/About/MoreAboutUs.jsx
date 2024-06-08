@@ -22,7 +22,7 @@ const MoreAboutUs = () => {
         <Box
           sx={{
             position: "absolute",
-            top: { xs: "-120px", sm: "-120px", md: "-120px" },
+            top: "-140px",
             filter: "brightness(90%)",
             zIndex: "-1",
             width: "100%",

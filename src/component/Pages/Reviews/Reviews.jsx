@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import ReviewCard from "./ReviewCard";
+import ReviewCorousel from "./ReviewCorousel";
 
 const Reviews = () => {
   return (
@@ -25,20 +26,22 @@ const Reviews = () => {
           India's #1 Selling Farm - Direct Organic Japanese Matcha
         </Typography>
       </Box>
-      <Box
+      {/* <Box
         sx={{
-          width: {xs: "240%", sm: "160%", md: "120%"},
+          width: { xs: "240%", sm: "160%", md: "120%" },
           position: "relative",
-          left: {xs: "-70%", sm: "-30%", md: "-10%"},
+          left: { xs: "-70%", sm: "-30%", md: "-10%" },
           display: "flex",
           justifyContent: "space-between",
           mt: "100px",
+          gap: "40px",
         }}
       >
         <ReviewCard />
         <ReviewCard />
         <ReviewCard />
-      </Box>
+      </Box> */}
+      <ReviewCorousel />
       <Box></Box>
     </Box>
   );

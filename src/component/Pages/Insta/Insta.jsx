@@ -74,7 +74,7 @@ const Insta = () => {
             animation: "scroll 10s linear infinite",
             "@keyframes scroll": {
               "0%": { transform: "translateY(0%)" },
-              "100%": { transform: "translateY(-50%)" },
+              "100%": { transform: "translateY(-40%)" },
             },
           }}
         >
@@ -137,7 +137,7 @@ const Insta = () => {
               />
             ))}
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: { xs: "none", lg: "grid" },
               gap: "20px",
@@ -157,7 +157,7 @@ const Insta = () => {
                 }}
               />
             ))}
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     </Box>

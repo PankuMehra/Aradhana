@@ -94,29 +94,33 @@ const Explore = () => {
       </Box>
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: {
-            xs: "1fr",
-            sm: "repeat(2, 1fr)",
-          },
+          display: { xs: "grid", md: "flex" },
           gap: {
             xs: "20px",
             sm: "30px",
-            md: "50px",
           },
         }}
       >
-        {[Teabag, Leaves, GlowFlow, Cramplest].map((image, index) => (
-          <Box key={index} position={"relative"}>
+        <Box
+          sx={{
+            display: "grid",
+            gap: {
+              xs: "20px",
+              sm: "30px",
+            },
+            height: { xs: "unset", md: "580px" },
+            overflow: "hidden",
+          }}
+        >
+          <Box position={"relative"}>
             <img
-              alt={`Explore ${index}`}
-              src={image}
+              alt={"Explore 1"}
+              src={Teabag}
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
                 filter: "brightness(80%)",
-                borderRadius: "8px",
               }}
             />
             <Typography
@@ -137,8 +141,162 @@ const Explore = () => {
               Lorem ipsum dolor sit amet
             </Typography>
           </Box>
-        ))}
+          <Box position={"relative"}>
+            <img
+              alt={"Explore 2"}
+              src={Leaves}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "16px",
+                  sm: "20px",
+                  md: "24px",
+                },
+                fontWeight: "400",
+                color: "#FFFFFC",
+                position: "absolute",
+                zIndex: "10",
+                top: 25,
+                left: 25,
+              }}
+            >
+              Lorem ipsum dolor sit amet
+            </Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: "grid",
+            gap: {
+              xs: "20px",
+              sm: "30px",
+            },
+            height: { xs: "unset", md: "700px" },
+            overflow: "hidden",
+            position: "relative",
+            top: { xs: "0px", md: "-120px" },
+          }}
+        >
+          <Box position={"relative"}>
+            <img
+              alt={"Explore 3"}
+              src={GlowFlow}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "16px",
+                  sm: "20px",
+                  md: "24px",
+                },
+                fontWeight: "400",
+                color: "#FFFFFC",
+                position: "absolute",
+                zIndex: "10",
+                top: 25,
+                left: 25,
+              }}
+            >
+              Lorem ipsum dolor sit amet
+            </Typography>
+          </Box>
+          <Box position={"relative"}>
+            <img
+              alt={"Explore 4"}
+              src={Cramplest}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "16px",
+                  sm: "20px",
+                  md: "24px",
+                },
+                fontWeight: "400",
+                color: "#FFFFFC",
+                position: "absolute",
+                zIndex: "10",
+                top: 25,
+                left: 25,
+              }}
+            >
+              Lorem ipsum dolor sit amet
+            </Typography>
+          </Box>
+        </Box>
       </Box>
+
+      {/* <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "1fr",
+            sm: "repeat(2, 1fr)",
+          },
+          height: "700px",
+          // overflowY: "hidden",
+          gap: {
+            xs: "20px",
+            sm: "30px",
+          },
+        }}
+      >
+        {[Teabag, Leaves, GlowFlow, Cramplest].map((image, index) => (
+          <Box key={index} position={"relative"}>
+            <img
+              alt={`Explore ${index}`}
+              src={image}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "brightness(80%)",
+                borderRadius: "8px",
+                position: index % 2 === 1 ? "relative" : "initial",
+                top: index % 2 === 1 ? "-40%" : "initial",
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "16px",
+                  sm: "20px",
+                  md: "24px",
+                },
+                fontWeight: "400",
+                color: "#FFFFFC",
+                position: "absolute",
+                zIndex: "10",
+                top: 25,
+                left: 25,
+                // position: index % 2 === 1 ? "relative" : "initial",
+                top: index % 2 === 1 ? "-35%" : "5%",
+              }}
+            >
+              Lorem ipsum dolor sit amet
+            </Typography>
+          </Box>
+        ))}
+      </Box> */}
     </Box>
   );
 };

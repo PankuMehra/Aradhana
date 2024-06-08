@@ -9,42 +9,44 @@ import Insta from "../Pages/Insta/Insta";
 import Reviews from "../Pages/Reviews/Reviews";
 import Delivery from "../Pages/Delivery/Delivery";
 
-const Main = ({
-  homeRef,
-  aboutRef,
-  zafersRef,
-  zafsRef,
-  blogRef,
-  contactRef,
-}) => {
-  return (
-    <Box>
-      <Box ref={homeRef}>
-        <Home />
-      </Box>
+const Main = () =>
+  //   {
+  //   homeRef,
+  //   aboutRef,
+  //   zafersRef,
+  //   zafsRef,
+  //   blogRef,
+  //   contactRef,
+  // }
+  {
+    return (
       <Box>
-        <Explore />
+        <Box>
+          <Home />
+        </Box>
+        <Box>
+          <Explore />
+        </Box>
+        <Box>
+          <About />
+        </Box>
+        <Box>
+          <Zafers />
+        </Box>
+        <Box>
+          <Zafs />
+        </Box>
+        <Box>
+          <Insta />
+        </Box>
+        <Box>
+          <Reviews />
+        </Box>
+        <Box>
+          <Delivery />
+        </Box>
       </Box>
-      <Box ref={aboutRef}>
-        <About />
-      </Box>
-      <Box ref={zafersRef}>
-        <Zafers />
-      </Box>
-      <Box ref={zafsRef}>
-        <Zafs />
-      </Box>
-      <Box>
-        <Insta />
-      </Box>
-      <Box ref={blogRef}>
-        <Reviews />
-      </Box>
-      <Box ref={contactRef}>
-        <Delivery />
-      </Box>
-    </Box>
-  );
-};
+    );
+  };
 
 export default Main;
