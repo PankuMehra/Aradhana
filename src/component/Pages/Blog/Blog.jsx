@@ -74,6 +74,7 @@ const Blog = () => {
         // position: "relative",
         // top: "-140px",
         marginTop: "-140px",
+        pt: "140px",
         p: { lg: "200px 200px" },
       }}
     >

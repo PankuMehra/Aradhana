@@ -30,7 +30,7 @@ const Home = () => {
         sx={{
           display: "grid",
           gap: { xs: 1, sm: 2, md: 3, lg: 6 },
-          p: { xs: "20px", sm: "40px", md: "60px", lg: "120px 200px" },
+          p: { xs: "20px 40px", sm: "40px", md: "60px", lg: "120px 200px" },
           position: "relative",
           overflow: "hidden",
         }}

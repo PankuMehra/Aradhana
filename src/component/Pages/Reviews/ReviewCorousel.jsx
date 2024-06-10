@@ -169,7 +169,10 @@ const ReviewCarousel = () => {
         // top: "100px",
         left: "50%",
         transform: "translate(-50%)",
-        width: { xs: "95%", md: "70%" },
+        width: { md: "70%" },
+        mt: {
+          xs: "10px",
+        },
       }}
     >
       <AutoPlaySwipeableViews
@@ -182,7 +185,7 @@ const ReviewCarousel = () => {
           <Box
             key={index}
             sx={{
-              height: "400px",
+              // height: "400px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",

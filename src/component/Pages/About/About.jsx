@@ -14,7 +14,7 @@ const About = () => {
         gap: { xs: "0%", md: "6%", lg: "8%" },
         bgcolor: "#55443D",
         p: {
-          xs: "20px",
+          xs: "20px 40px",
           sm: "40px",
           md: "60px",
           lg: "120px 200px",

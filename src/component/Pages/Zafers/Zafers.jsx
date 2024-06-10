@@ -20,9 +20,9 @@ const Zafers = () => {
         justifyContent: "flex-start",
         gap: { xs: 4, md: "8%" },
         bgcolor: "#FFFFFF",
-        p: { xs: "20px", sm: "40px", md: "80px 0px 80px 160px" },
+        p: { xs: "20px 40px", sm: "40px", md: "80px 0px 80px 160px" },
         p: {
-          xs: "20px",
+          xs: "40px 40px",
           sm: "40px",
           md: "60px 0px 60px 60px",
           lg: "120px 0px 120px 200px",

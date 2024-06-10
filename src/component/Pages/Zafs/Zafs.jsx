@@ -9,7 +9,7 @@ const Zafs = () => {
       sx={{
         bgcolor: "#55443D",
         p: {
-          xs: "20px",
+          xs: "20px 40px",
           sm: "40px",
           md: "60px",
           lg: "70px 100px",

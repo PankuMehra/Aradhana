@@ -20,7 +20,7 @@ const Footer = () => {
     >
       <Box
         sx={{
-          display: { xs: "grid", sm: "flex" },
+          display: { xs: "flex", sm: "flex" },
           gap: { xs: 2, sm: 8 },
         }}
       >
@@ -40,7 +40,7 @@ const Footer = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: "row",
             alignItems: "center",
             justifyContent: { xs: "center", md: "flex-start" },
             gap: "30px",
@@ -73,8 +73,8 @@ const Footer = () => {
             xs: "center",
             md: "center",
           },
-          gap: 8,
-          mt: 5,
+          gap: { xs: 0, md: 8 },
+          // mt: 5,
         }}
       >
         <img
@@ -96,16 +96,16 @@ const Footer = () => {
             },
             display: "flex",
             flexDirection: {
-              xs: "column",
               md: "row",
             },
-            justifyContent: "flex-start",
+            justifyContent: { xs: "center", md: "flex-start" },
             alignItems: "center",
             textTransform: "uppercase",
             gap: {
               xs: "10px",
               md: 4,
             },
+            flexWrap: { xs: "wrap" },
           }}
         >
           {[
@@ -121,7 +121,7 @@ const Footer = () => {
               key={text}
               href="#"
               style={{
-                fontSize: "18px",
+                fontSize: { xs: "8px", md: "18px" },
                 fontWeight: "600",
                 color: "#FFFFFC",
                 textDecoration: "none",
