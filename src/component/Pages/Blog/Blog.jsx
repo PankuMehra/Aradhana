@@ -60,10 +60,13 @@
 // export default Blog;
 
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import BlogCard from "./BlogCard";
 
 const Blog = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Box
       sx={{
@@ -71,14 +74,14 @@ const Blog = () => {
         // position: "relative",
         // top: "-140px",
         marginTop: "-140px",
-        pb: "100px",
+        p: { lg: "200px 200px" },
       }}
     >
       <Box
         sx={{
           width: { xs: "90%", md: "60%" },
           m: "auto",
-          pt: { xs: "140px", md: "240px" },
+          // pt: { xs: "140px", md: "240px" },
           mb: 6,
         }}
       >

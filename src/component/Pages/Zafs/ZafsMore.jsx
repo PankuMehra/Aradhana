@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import ZaferBG from "../../Common/assets/Images/Zafers/Zafer_BG.jpg";
 import mission from "../../Common/assets/Images/Zafers/mission.png";
 import Corousel from "../../Common/UI/Corousel";
@@ -8,30 +8,29 @@ import deliveryboy from "../../Common/assets/Images/Zafers/dilveryboy.png";
 import zomato from "../../Common/assets/Images/Zafers/zomato-logo.png";
 import swiggy from "../../Common/assets/Images/Zafers/swiggy-logo.png";
 import Home from "../Home/Home";
+import Zafs_packet from "../../Common/assets/Images/Zafs_packet.png";
+import HomeBG from "../../Common/assets/Images/HomeBG.png";
 
 const ZafsMore = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-      <Home />
-      <Box
-        sx={{
-          position: "relative",
-        }}
-      >
+      <Box sx={{ position: "relative" }}>
         <Box
           sx={{
             position: "absolute",
-            top: "0px",
-            bottom: { xs: "120px", sm: "120px", md: "120px" },
-            filter: "brightness(90%)",
+            top: "-140px",
+            filter: "brightness(50%)",
             zIndex: "-1",
             width: "100%",
-            height: { xs: "1200px", sm: "1000px", md: "800" },
+            height: { xs: "1400px", sm: "1200px", md: "1000px" },
           }}
         >
           <img
             alt="Home"
-            src={ZaferBG}
+            src={HomeBG}
             width="100%"
             style={{
               objectFit: "cover",
@@ -41,85 +40,112 @@ const ZafsMore = () => {
         </Box>
         <Box
           sx={{
-            // width: "100%",
-            p: { xs: "20px", sm: "40px", md: "60px" },
-            mb: { xs: "140px", sm: "120px", md: "100px" },
+            display: "grid",
+            gap: { xs: 1, sm: 2, md: 3, lg: 6 },
+            p: { xs: "20px", sm: "40px", md: "60px", lg: "120px 200px" },
+            position: "relative",
+            overflow: "hidden",
           }}
         >
-          <Typography
-            sx={{
-              fontSize: { xs: "30px", md: "16px" },
-              fontWeight: 600,
-              color: "#ed641a",
-            }}
-          >
-            ABOUT US
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "40px",
-              fontWeight: 600,
-              color: "#FFFFFC",
-              mb: "25px",
-            }}
-          >
-            Zaf's
-          </Typography>
+          <Box>
+            <Box
+              sx={{
+                width: "85%",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: { xs: "24px", sm: "40px", md: "50px", lg: "64px" },
+                  fontWeight: 600,
+                  color: "#FFFFFC",
+                }}
+                className="heading-font"
+              >
+                Zaf's
+              </Typography>
+            </Box>
+          </Box>
           <Typography
             sx={{
               fontSize: "18px",
               fontWeight: 400,
               color: "#FFFFFF",
-              mb: "25px",
+              width: { xs: "85%", md: "60%", lg: "60%" },
             }}
           >
             At Zaf, tea is not just a beverage; it's an art form.
+            <br />
+            <br />
+            When it comes to vibing with a beverage in India, it has to be chai.
+            At Zafar, we blend tradition, joy, and taste to unite communities
+            with love. From classic chai to exotic herbal infusions, each sip at
+            Zafar is filled with freshness, flavor that you find difficult to
+            resist.
+            <br />
+            <br />
+            We are more than just a tea cafe; we endeavor to serve an experience
+            to help friends connect, families unwind, and individuals find
+            solace. Step into the soothing ambiance and attentive service that
+            feels like a home away from home.
           </Typography>
-          <Typography
+          <Box
             sx={{
-              fontSize: "18px",
-              fontWeight: 400,
-              color: "#FFFFFF",
-              mb: "25px",
+              position: "absolute",
+              display: { xs: "none", md: "unset" },
+              bottom: {
+                xs: "10px",
+                sm: "1200px",
+                md: "80px",
+                lg: "80px",
+                xl: "60px",
+              },
+              width: { md: "40%", lg: "40%" },
+              right: "0px",
+              zIndex: "-1",
+              // animation: "swipeImage 5s ease-out 1",
+              // animationFillMode: "forwards",
+              // "@keyframes swipeImage": {
+              //   "0%": {
+              //     transform: "translateX(100%)",
+              //     opacity: 0,
+              //   },
+              //   "20%": {
+              //     transform: "translateX(100%)",
+              //     opacity: 0,
+              //   },
+              //   "40%": {
+              //     transform: "translateX(0%)",
+              //     opacity: 1,
+              //   },
+              //   "60%": {
+              //     transform: "translateX(0%)",
+              //     opacity: 1,
+              //   },
+              //   "100%": {
+              //     transform: "translateX(-600%)",
+              //     opacity: 0,
+              //   },
+              // },
             }}
           >
-            Welcome to Zaf, where passion meets perfection in every sip. Rooted
-            in a passion for tea, Zaf is more than a brand, but an experience
-            dedicated to cherishing moments of joy with the aroma of tea. Join
-            us on a journey where tradition meets innovation, and the art of tea
-            is celebrated with every sip.
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "18px",
-              fontWeight: 400,
-              color: "#FFFFFF",
-              mb: "25px",
-            }}
-          >
-            With a rich heritage rooted in the ancient traditions of tea, we
-            blend different tea flavors with modern flair to bring you an
-            exceptional tea experience. From the lush tea gardens to your cup,
-            our process is infused with dedication and expertise.
-          </Typography>
+            <img
+              alt="ZafsPacket"
+              src={Zafs_packet}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                display: "none",
+              }}
+            />
+          </Box>
         </Box>
-      </Box>
-      <Box
-        sx={{
-          background: "#ED641A",
-          position: "relative",
-          height: "400px",
-          width: "100%",
-        }}
-      >
-        <Corousel />
       </Box>
       <Box
         sx={{
           background: "#BAA98F",
           display: "flex",
           flexDirection: { xs: "column-reverse", md: "row" },
-          p: { xs: "30px", sm: "40px", md: "60px" },
+          p: { xs: "30px", sm: "40px", md: "60px", lg: "120px 200px" },
           justifyContent: "center",
           alignItems: "center",
           gap: "30px",
@@ -148,9 +174,9 @@ const ZafsMore = () => {
           <Typography
             sx={{
               fontSize: { xs: "30px", md: "40px" },
-              fontWeight: "600",
               color: "#FFFFFC",
             }}
+            className="heading-font"
           >
             <span style={{ color: "#ED641A" }}>Why</span> Zaf?
           </Typography>

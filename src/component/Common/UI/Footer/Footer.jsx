@@ -1,7 +1,9 @@
 import { Avatar, Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import FooterLogo from "../../assets/Images/FooterLogo.png";
-import { FacebookLogo, InstaLogo, LinkedinLogo } from "../../assets/Icons";
+import facebook from "../../assets/Images/png/facebook.png";
+import instagram from "../../assets/Images/png/instagram.png";
+import linkedIn from "../../assets/Images/png/linkedIn.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,7 +14,7 @@ const Footer = () => {
         p: {
           xs: "20px",
           sm: "40px",
-          lg: "60px",
+          lg: "60px 200px",
         },
       }}
     >
@@ -20,18 +22,18 @@ const Footer = () => {
         sx={{
           display: { xs: "grid", sm: "flex" },
           gap: { xs: 2, sm: 8 },
-          mb: 5,
         }}
       >
         <Typography
           sx={{
             fontSize: "25px",
-            fontWeight: "600",
+            // fontWeight: "600",
             color: "#ED641A",
             my: "30px",
-            textTransform: "uppercase",
+            // textTransform: "uppercase",
             textAlign: { xs: "center", md: "unset" },
           }}
+          className="heading-font"
         >
           Follow Us
         </Typography>
@@ -48,13 +50,13 @@ const Footer = () => {
             href="https://www.instagram.com/aradhanahospitality"
             target="_blank"
           >
-            <InstaLogo />
+            <img className="footer-logo" src={instagram} alt="" />
           </Link>
           <Link href="https://www.facebook.com/aradhanahospitality">
-            <FacebookLogo />
+            <img className="footer-logo" src={facebook} alt="" />
           </Link>
           <Link href="https://www.linkedin.com/company/aradhanahospitality">
-            <LinkedinLogo />
+            <img className="footer-logo" src={linkedIn} alt="" />
           </Link>
         </Box>
       </Box>

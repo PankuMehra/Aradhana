@@ -41,8 +41,9 @@ const Zafs = () => {
                 fontWeight: "600",
                 color: "#FFFFFC",
               }}
+              className="heading-font"
             >
-              Flavorful, Quality Tea to Make up Your Mood -{" "}
+              Flavorful, Quality Tea to Make up <br /> Your Mood -{" "}
               <span style={{ color: "#ED641A" }}>Anytime, Anywhere!</span>
             </Typography>
           </Box>

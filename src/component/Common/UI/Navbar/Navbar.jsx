@@ -107,13 +107,13 @@ const Navbar = () =>
                 xs: "25px 30px",
                 sm: "25px 45px",
                 md: "25px 60px",
-                lg: "25px 120px",
+                lg: "25px 200px",
               }
             : {
                 xs: "20px 25px",
                 sm: "20px 40px",
                 md: "20px 50px",
-                lg: "20px 110px",
+                lg: "20px 200px",
               },
           position: "sticky",
           top: 0,

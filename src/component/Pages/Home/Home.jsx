@@ -30,7 +30,7 @@ const Home = () => {
         sx={{
           display: "grid",
           gap: { xs: 1, sm: 2, md: 3, lg: 6 },
-          p: { xs: "20px", sm: "40px", md: "60px", lg: "120px" },
+          p: { xs: "20px", sm: "40px", md: "60px", lg: "120px 200px" },
           position: "relative",
           overflow: "hidden",
         }}
@@ -64,6 +64,7 @@ const Home = () => {
                 fontWeight: 600,
                 color: "#FFFFFC",
               }}
+              className="heading-font"
             >
               Welcome to
             </Typography>
@@ -73,6 +74,7 @@ const Home = () => {
                 fontWeight: 600,
                 color: "#FFFFFC",
               }}
+              className="heading-font"
             >
               Aradhana Hospitality
             </Typography>
@@ -105,6 +107,7 @@ const Home = () => {
               fontWeight: 600,
               color: "#FFFFFC",
             }}
+            className="heading-font"
           >
             Tea-Trends
           </Typography>
@@ -114,6 +117,7 @@ const Home = () => {
               fontWeight: 600,
               color: "#FFFFFC",
             }}
+            className="heading-font"
           >
             That thrills you with every golder sip.
           </Typography>
@@ -129,7 +133,7 @@ const Home = () => {
           Since 1974, India's Top Tea Cafe serves quality chai, verse snacks and
           a vibe that leaves every customer smiling.
         </Typography>
-        <Button
+        {/* <Button
           variant="contained"
           sx={{
             bgcolor: "#ED641A",
@@ -138,6 +142,23 @@ const Home = () => {
             width: { xs: "150px", sm: "200px", md: "230px", lg: "255px" },
             fontSize: { xs: "12px", sm: "14px", md: "18px", lg: "20px" },
             fontWeight: 600,
+            "&:hover": {
+              backgroundColor: "#d75f1e",
+            },
+          }}
+        >
+          Explore Now
+        </Button> */}
+
+        <Button
+          variant="contained"
+          sx={{
+            bgcolor: "#ED641A",
+            borderRadius: "8px",
+            height: { xs: "36px", sm: "46px", md: "56px" },
+            width: { xs: "140px", sm: "160px", md: "180px" },
+            fontSize: { xs: "12px", sm: "14px", md: "16px" },
+            fontWeight: "600",
             "&:hover": {
               backgroundColor: "#d75f1e",
             },

@@ -7,7 +7,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactBG from "../../Common/assets/Images/About/About_BG.jpg";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -50,6 +50,10 @@ const ContactUs = () => {
     // }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Box>
       <Box
@@ -87,22 +91,22 @@ const ContactUs = () => {
           <Typography
             sx={{
               fontSize: "18px",
-              fontWeight: 600,
               color: "#ffffff",
               textAlign: "center",
               letterSpacing: "5px",
             }}
+            className="heading-font"
           >
             CONTACT US
           </Typography>
           <Typography
             sx={{
               fontSize: { xs: "36px", md: "48px" },
-              fontWeight: 400,
               color: "#FFFFFC",
               mb: "25px",
               textAlign: "center",
             }}
+            className="heading-font"
           >
             Connect with us.
           </Typography>
@@ -128,7 +132,7 @@ const ContactUs = () => {
           flexDirection: { xs: "column", md: "row" },
           gap: { xs: "20px", sm: "30px", md: "40px", lg: "80px" },
           bgcolor: "white",
-          p: { xs: "40px", sm: "100px", md: "100px 80px" },
+          p: { xs: "40px", sm: "100px", md: "100px 80px", lg: "120px 200px" },
         }}
       >
         <Box
