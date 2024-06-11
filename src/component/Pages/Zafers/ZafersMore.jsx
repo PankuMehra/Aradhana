@@ -25,7 +25,7 @@ const ZafersMore = () => {
             filter: "brightness(50%)",
             zIndex: "-1",
             width: "100%",
-            height: { xs: "1400px", sm: "1200px", md: "1000px" },
+            height: { xs: "1200px", sm: "1200px", md: "1000px" },
           }}
         >
           <img
