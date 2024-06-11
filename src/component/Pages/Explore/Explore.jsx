@@ -11,11 +11,11 @@ const Explore = () => {
       sx={{
         bgcolor: "#FFFFFF",
         p: {
-          xs: "20px",
+          xs: "20px 40px",
           sm: "40px",
           md: "60px",
-          lg: "70px 100px",
-          xl: "70px 140px",
+          lg: "120px 200px",
+          xl: "120px 200px",
         },
       }}
     >
@@ -46,13 +46,13 @@ const Explore = () => {
               sm: "32px",
               md: "40px",
             },
-            fontWeight: "600",
             color: "#ED641A",
             textAlign: {
               xs: "center",
               sm: "left",
             },
           }}
+          className="heading-font"
         >
           Explore Our Products
         </Typography>
@@ -108,7 +108,7 @@ const Explore = () => {
               xs: "20px",
               sm: "30px",
             },
-            height: { xs: "unset", md: "580px" },
+            height: { xs: "unset", md: "800px" },
             overflow: "hidden",
           }}
         >
@@ -178,13 +178,12 @@ const Explore = () => {
               xs: "20px",
               sm: "30px",
             },
-            height: { xs: "unset", md: "700px" },
+            height: { xs: "unset", md: "800px" },
             overflow: "hidden",
             position: "relative",
-            top: { xs: "0px", md: "-120px" },
           }}
         >
-          <Box position={"relative"}>
+          <Box position={"relative"} sx={{ height: "350px" }}>
             <img
               alt={"Explore 3"}
               src={GlowFlow}

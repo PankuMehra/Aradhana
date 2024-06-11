@@ -14,11 +14,11 @@ const About = () => {
         gap: { xs: "0%", md: "6%", lg: "8%" },
         bgcolor: "#55443D",
         p: {
-          xs: "20px",
+          xs: "20px 40px",
           sm: "40px",
           md: "60px",
-          lg: "70px 100px",
-          xl: "70px 140px",
+          lg: "120px 200px",
+          xl: "120px 200px",
         },
       }}
     >
@@ -45,7 +45,6 @@ const About = () => {
               sm: "32px",
               md: "40px",
             },
-            fontWeight: "600",
             color: "#FFFFFC",
             textAlign: {
               xs: "center",
@@ -120,7 +119,8 @@ const About = () => {
           }}
         >
           <Typography
-            sx={{ fontSize: "40px", fontWeight: "600", color: "#FFFFFC" }}
+            className="heading-font"
+            sx={{ fontSize: "40px", color: "#FFFFFC" }}
           >
             About <span style={{ color: "#ED641A" }}>Us</span>
           </Typography>
@@ -153,7 +153,7 @@ const About = () => {
           </Typography>
         </Box>
         <Box>
-          <Button
+          {/* <Button
             variant="contained"
             sx={{
               bgcolor: "#ED641A",
@@ -161,6 +161,23 @@ const About = () => {
               height: "72px",
               width: "255px",
               fontSize: "20px",
+              fontWeight: "600",
+              "&:hover": {
+                backgroundColor: "#d75f1e",
+              },
+            }}
+          >
+            Read More
+          </Button> */}
+
+          <Button
+            variant="contained"
+            sx={{
+              bgcolor: "#ED641A",
+              borderRadius: "8px",
+              height: { xs: "36px", sm: "46px", md: "56px" },
+              width: { xs: "140px", sm: "160px", md: "180px" },
+              fontSize: { xs: "12px", sm: "14px", md: "16px" },
               fontWeight: "600",
               "&:hover": {
                 backgroundColor: "#d75f1e",

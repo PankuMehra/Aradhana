@@ -27,10 +27,10 @@ const Insta = () => {
         m: "2px 0px",
         overflow: "hidden",
         p: {
-          xs: "20px",
+          xs: "20px 40px",
           sm: "40px",
           md: "0px 0px 0px 60px",
-          lg: "0px 0px 0px 100px",
+          lg: "0px 0px 0px 120px",
           xl: "0px 0px 0px 140px",
         },
       }}

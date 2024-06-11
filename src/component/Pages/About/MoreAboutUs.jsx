@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import AboutBG from "../../Common/assets/Images/About/About_BG.jpg";
 import OldMan from "../../Common/assets/Images/About/More_about_old_man.png";
 import ZafsPacket from "../../Common/assets/Images/About/Zaf's_packet.png";
@@ -12,6 +12,9 @@ import FurturatechLogo from "../../Common/assets/Images/About/Furturatech_logo.p
 import TestimonialCard from "./TestimonialCard";
 
 const MoreAboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Box
@@ -42,25 +45,25 @@ const MoreAboutUs = () => {
         <Box
           sx={{
             // width: "100%",
-            p: { xs: "20px", sm: "40px", md: "60px" },
+            p: { xs: "20px", sm: "40px", md: "60px", lg: "120px 200px" },
           }}
         >
           <Typography
             sx={{
               fontSize: { xs: "30px", md: "16px" },
-              fontWeight: 600,
               color: "#ed641a",
             }}
+            className="heading-font"
           >
             ABOUT US
           </Typography>
           <Typography
             sx={{
               fontSize: "40px",
-              fontWeight: 600,
               color: "#FFFFFC",
               mb: "25px",
             }}
+            className="heading-font"
           >
             Welcome to Aradhana Hospitality
           </Typography>
@@ -171,7 +174,7 @@ const MoreAboutUs = () => {
           gap: { xs: 2, sm: 4, md: "8%" },
           mb: { xs: "40px", sm: "60px", md: "80px" },
           bgcolor: "#F1F1F1",
-          p: { xs: "20px", sm: "40px", md: "60px" },
+          p: { xs: "20px", sm: "40px", md: "60px", lg: "120px 200px" },
         }}
       >
         <Box width={{ xs: "100%", md: "50%" }}>
@@ -183,9 +186,9 @@ const MoreAboutUs = () => {
             <Typography
               sx={{
                 fontSize: { xs: "24px", sm: "32px", md: "40px" },
-                fontWeight: "600",
                 color: "#ed641a",
               }}
+              className="heading-font"
             >
               Our <span style={{ color: "#000" }}>Goal</span>
             </Typography>
@@ -275,10 +278,10 @@ const MoreAboutUs = () => {
           <Typography
             sx={{
               fontSize: "40px",
-              fontWeight: "600",
               color: "#ed641a",
               textAlign: "center",
             }}
+            className="heading-font"
           >
             Our <span style={{ color: "#FFFFFF" }}>Testimonial</span>
           </Typography>
@@ -291,6 +294,9 @@ const MoreAboutUs = () => {
               md: "repeat(2,1fr)",
             },
             gap: "30px",
+            p: {
+              lg: "120px 200px",
+            },
           }}
         >
           <TestimonialCard />
@@ -304,7 +310,7 @@ const MoreAboutUs = () => {
             xs: "40px",
             md: "60px",
             lg: "70px 100px",
-            xl: "80px 140px",
+            lg: "120px 200px",
           },
         }}
       >
@@ -316,10 +322,10 @@ const MoreAboutUs = () => {
           <Typography
             sx={{
               fontSize: "40px",
-              fontWeight: "600",
               color: "#ed641a",
               textAlign: "center",
             }}
+            className="heading-font"
           >
             Media <span style={{ color: "#000" }}>Mentions</span>
           </Typography>

@@ -1,7 +1,9 @@
 import { Avatar, Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import FooterLogo from "../../assets/Images/FooterLogo.png";
-import { FacebookLogo, InstaLogo, LinkedinLogo } from "../../assets/Icons";
+import facebook from "../../assets/Images/png/facebook.png";
+import instagram from "../../assets/Images/png/instagram.png";
+import linkedIn from "../../assets/Images/png/linkedIn.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,33 +14,33 @@ const Footer = () => {
         p: {
           xs: "20px",
           sm: "40px",
-          lg: "60px",
+          lg: "60px 200px",
         },
       }}
     >
       <Box
         sx={{
-          display: { xs: "grid", sm: "flex" },
+          display: { xs: "flex", sm: "flex" },
           gap: { xs: 2, sm: 8 },
-          mb: 5,
         }}
       >
         <Typography
           sx={{
             fontSize: "25px",
-            fontWeight: "600",
+            // fontWeight: "600",
             color: "#ED641A",
             my: "30px",
-            textTransform: "uppercase",
+            // textTransform: "uppercase",
             textAlign: { xs: "center", md: "unset" },
           }}
+          className="heading-font"
         >
           Follow Us
         </Typography>
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: "row",
             alignItems: "center",
             justifyContent: { xs: "center", md: "flex-start" },
             gap: "30px",
@@ -48,13 +50,13 @@ const Footer = () => {
             href="https://www.instagram.com/aradhanahospitality"
             target="_blank"
           >
-            <InstaLogo />
+            <img className="footer-logo" src={instagram} alt="" />
           </Link>
           <Link href="https://www.facebook.com/aradhanahospitality">
-            <FacebookLogo />
+            <img className="footer-logo" src={facebook} alt="" />
           </Link>
           <Link href="https://www.linkedin.com/company/aradhanahospitality">
-            <LinkedinLogo />
+            <img className="footer-logo" src={linkedIn} alt="" />
           </Link>
         </Box>
       </Box>
@@ -71,8 +73,8 @@ const Footer = () => {
             xs: "center",
             md: "center",
           },
-          gap: 8,
-          mt: 5,
+          gap: { xs: 0, md: 8 },
+          // mt: 5,
         }}
       >
         <img
@@ -94,16 +96,16 @@ const Footer = () => {
             },
             display: "flex",
             flexDirection: {
-              xs: "column",
               md: "row",
             },
-            justifyContent: "flex-start",
+            justifyContent: { xs: "center", md: "flex-start" },
             alignItems: "center",
             textTransform: "uppercase",
             gap: {
               xs: "10px",
               md: 4,
             },
+            flexWrap: { xs: "wrap" },
           }}
         >
           {[
@@ -119,7 +121,7 @@ const Footer = () => {
               key={text}
               href="#"
               style={{
-                fontSize: "18px",
+                fontSize: { xs: "8px", md: "18px" },
                 fontWeight: "600",
                 color: "#FFFFFC",
                 textDecoration: "none",

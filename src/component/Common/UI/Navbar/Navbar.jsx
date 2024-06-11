@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import { Logo } from "../../assets/Icons";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useLocation, useNavigate } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () =>
   //   {
@@ -107,13 +108,13 @@ const Navbar = () =>
                 xs: "25px 30px",
                 sm: "25px 45px",
                 md: "25px 60px",
-                lg: "25px 120px",
+                lg: "25px 200px",
               }
             : {
                 xs: "20px 25px",
                 sm: "20px 40px",
                 md: "20px 50px",
-                lg: "20px 110px",
+                lg: "20px 200px",
               },
           position: "sticky",
           top: 0,
@@ -139,8 +140,10 @@ const Navbar = () =>
               sx={{
                 fontSize: "18px",
                 fontWeight: "600",
-                color: "#FFFFFC",
+                color:
+                  location.pathname === `/${item.ref}` ? "#ed641a" : "#FFFFFC",
                 cursor: "pointer",
+                fontFamily: "Urbanist, sans-serif",
               }}
               onClick={() => handleNavClick(item.ref)}
             >
@@ -152,32 +155,71 @@ const Navbar = () =>
           sx={{ display: { xs: "block", md: "none" }, color: "#FFFFFC" }}
           onClick={toggleDrawer(true)}
         >
-          <MenuIcon />
+          <MenuIcon
+            sx={{
+              bgcolor: "#ed641a",
+              color: "#151515",
+              borderRadius: "2px",
+              p: "4px",
+            }}
+          />
         </IconButton>
         <Drawer
-          anchor="right"
+          anchor="top"
           open={drawerOpen}
           onClose={toggleDrawer(false)}
           sx={{
             "& .MuiDrawer-paper": {
               bgcolor: "rgba(0, 0, 0, 0.8)",
-              width: "60%",
+              width: "100%",
               color: "#ed641a",
               bgcolor: "white",
             },
           }}
         >
-          <List>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              bgcolor: "#352D29",
+              p: 2,
+            }}
+          >
+            <Box sx={{ cursor: "pointer" }} onClick={() => handleNavClick("")}>
+              <Logo />
+            </Box>
+            <IconButton onClick={toggleDrawer(false)}>
+              <CloseIcon
+                sx={{
+                  bgcolor: "#ed641a",
+                  color: "#151515",
+                  borderRadius: "2px",
+                  p: "4px",
+                }}
+              />
+            </IconButton>
+          </Box>
+          <List sx={{ p: 0 }}>
             {navItems.map((item, index) => (
               <ListItem
-                button
                 key={index}
                 onClick={() => {
                   handleNavClick(item.ref);
                   setDrawerOpen(false);
                 }}
+                sx={{
+                  bgcolor:
+                    location.pathname === `/${item.ref}`
+                      ? "#3f444b"
+                      : "transparent",
+                }}
               >
-                <ListItemText primary={item.label} />
+                <ListItemText
+                  primary={item.label}
+                  primaryTypographyProps={{
+                    fontFamily: "Urbanist, sans-serif",
+                  }}
+                />
               </ListItem>
             ))}
           </List>
