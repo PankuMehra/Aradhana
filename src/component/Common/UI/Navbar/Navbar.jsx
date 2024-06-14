@@ -104,25 +104,31 @@ const Navbar = () =>
           bgcolor: isScrolled ? "rgba(0, 0, 0, 0.5)" : "transparent",
           p: isScrolled
             ? {
-                xs: "25px 30px",
-                sm: "25px 45px",
-                md: "25px 60px",
-                lg: "25px 200px",
+                xs: "15px 30px 10px",
+                sm: "15px 45px 10px",
+                md: "15px 60px 10px",
+                lg: "15px 200px 10px",
               }
             : {
-                xs: "20px 25px",
-                sm: "20px 40px",
-                md: "20px 50px",
-                lg: "20px 200px",
+                xs: "15px 25px 10px",
+                sm: "15px 40px 10px",
+                md: "15px 50px 10px",
+                lg: "15px 200px 10px",
               },
           position: "sticky",
           top: 0,
-          zIndex: 999,
+          zIndex: 99999,
           transition: "padding 0.3s ease, background-color 0.3s ease",
         }}
       >
         <Box sx={{ cursor: "pointer" }} onClick={() => handleNavClick("")}>
-          <Logo />
+          {/* <Logo /> */}
+          <img
+            src="https://aradhanahospitality.com/demo/wp-content/uploads/2024/02/Aradhana-White.svg"
+            alt="logo"
+            srcset=""
+            width={"90px"}
+          />
         </Box>
         <Box
           sx={{
@@ -130,7 +136,7 @@ const Navbar = () =>
             justifyContent: "space-around",
             alignItems: "center",
             textTransform: "uppercase",
-            width: { md: "70%", lg: "60%" },
+            width: { md: "60%", lg: "50%" },
           }}
         >
           {navItems.map((item, index) => (
@@ -161,7 +167,7 @@ const Navbar = () =>
           sx={{
             "& .MuiDrawer-paper": {
               bgcolor: "rgba(0, 0, 0, 0.8)",
-              width: "60%",
+              width: "50%",
               color: "#ed641a",
               bgcolor: "white",
             },

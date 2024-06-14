@@ -14,7 +14,7 @@ const Footer = () => {
         p: {
           xs: "20px",
           sm: "40px",
-          lg: "60px 200px",
+          lg: "60px 350px",
         },
       }}
     >
@@ -63,6 +63,7 @@ const Footer = () => {
       <Divider sx={{ bgcolor: "#ffffff" }} />
       <Box
         sx={{
+          width: "100%",
           display: "flex",
           flexDirection: {
             xs: "column",
@@ -92,7 +93,7 @@ const Footer = () => {
           sx={{
             width: {
               xs: "100%",
-              md: "70%",
+              md: "60%",
             },
             display: "flex",
             flexDirection: {
@@ -135,6 +136,19 @@ const Footer = () => {
             </Link>
           ))}
         </Box>
+        <h2
+          style={{
+            fontSize: "16px",
+            padding: "0",
+            margin: "0",
+            width: "20%",
+            textAlign: "right",
+            fontWeight: "600",
+            color: "#ffffff",
+          }}
+        >
+          MADE WITH BY <span style={{ fontWeight: "900" }}>AGHORI</span>
+        </h2>
       </Box>
     </Box>
   );

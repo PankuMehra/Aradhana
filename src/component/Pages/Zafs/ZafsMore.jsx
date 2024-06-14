@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import ZaferBG from "../../Common/assets/Images/Zafers/Zafer_BG.jpg";
 import mission from "../../Common/assets/Images/Zafers/mission.png";
@@ -10,134 +10,120 @@ import swiggy from "../../Common/assets/Images/Zafers/swiggy-logo.png";
 import Home from "../Home/Home";
 import Zafs_packet from "../../Common/assets/Images/Zafs_packet.png";
 import HomeBG from "../../Common/assets/Images/HomeBG.png";
+import Carousel from "react-material-ui-carousel";
+import CommonCarousel from "component/Common/Carousel/CommonCarousel";
 
 const ZafsMore = () => {
+  var items = [
+    {
+      name: "Random Name #1",
+      description: "Probably the most random thing you have ever seen!",
+      imageUrl:
+        "https://img.freepik.com/premium-photo/drink-cup-espresso-aroma-brown-morning-cafe-bean-breakfast-mug-generative-ai_163305-184163.jpg?size=626&ext=jpg&ga=GA1.2.89897119.1718395474&semt=sph",
+    },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+      imageUrl:
+        "https://img.freepik.com/free-photo/fresh-coffee-steams-wooden-table-close-up-generative-ai_188544-8923.jpg?t=st=1718395475~exp=1718399075~hmac=2204a6303a338f4e2b2f79cc66d6799646f610dfebb234f5d31298ace9b94da7&w=1380",
+    },
+  ];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <Box sx={{ position: "relative" }}>
-        <Box
+      <Box sx={{ position: "relative", height: "800px" }}>
+        <Carousel
+          cycleNavigation="true"
+          animation="slide"
+          interval={15000}
           sx={{
             position: "absolute",
-            top: "-140px",
-            filter: "brightness(50%)",
-            zIndex: "-1",
+            top: "-200px",
+            left: 0,
+            right: 0,
             width: "100%",
-            height: { xs: "1400px", sm: "1200px", md: "1000px" },
           }}
+          height={1000}
+          indicators={false}
         >
-          <img
-            alt="Home"
-            src={HomeBG}
-            width="100%"
-            style={{
-              objectFit: "cover",
-              height: "100%",
-            }}
-          />
-        </Box>
+          {items.map((item, i) => (
+            <CommonCarousel key={i} item={item} />
+          ))}
+        </Carousel>
+      </Box>
+      <Box
+        sx={{
+          background: "#fff",
+          display: "flex",
+          flexDirection: { xs: "column-reverse", md: "row" },
+          p: { xs: "30px", sm: "40px", md: "60px", lg: "120px 300px" },
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "30px",
+        }}
+      >
         <Box
           sx={{
-            display: "grid",
-            gap: { xs: 1, sm: 2, md: 3, lg: 6 },
-            p: { xs: "20px", sm: "40px", md: "60px", lg: "120px 200px" },
-            position: "relative",
-            overflow: "hidden",
+            width: { xs: "100%", md: "50%" },
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            gap: "40px",
           }}
         >
-          <Box>
-            <Box
-              sx={{
-                width: "85%",
-              }}
-            >
-              <Typography
-                sx={{
-                  fontSize: { xs: "24px", sm: "40px", md: "50px", lg: "64px" },
-                  fontWeight: 600,
-                  color: "#FFFFFC",
-                }}
-                className="heading-font"
-              >
-                Zaf's
-              </Typography>
-            </Box>
-          </Box>
           <Typography
             sx={{
-              fontSize: "18px",
-              fontWeight: 400,
-              color: "#FFFFFF",
-              width: { xs: "85%", md: "60%", lg: "60%" },
+              fontSize: { xs: "30px", md: "40px" },
+              fontWeight: "600",
+              color: "#55443D",
             }}
           >
-            At Zaf, tea is not just a beverage; it's an art form.
-            <br />
-            <br />
-            When it comes to vibing with a beverage in India, it has to be chai.
-            At Zafar, we blend tradition, joy, and taste to unite communities
-            with love. From classic chai to exotic herbal infusions, each sip at
-            Zafar is filled with freshness, flavor that you find difficult to
-            resist.
-            <br />
-            <br />
-            We are more than just a tea cafe; we endeavor to serve an experience
-            to help friends connect, families unwind, and individuals find
-            solace. Step into the soothing ambiance and attentive service that
-            feels like a home away from home.
+            <span style={{ color: "#ED641A" }}>About</span> Us
           </Typography>
-          <Box
-            sx={{
-              position: "absolute",
-              display: { xs: "none", md: "unset" },
-              bottom: {
-                xs: "10px",
-                sm: "1200px",
-                md: "80px",
-                lg: "80px",
-                xl: "60px",
-              },
-              width: { md: "40%", lg: "40%" },
-              right: "0px",
-              zIndex: "-1",
-              // animation: "swipeImage 5s ease-out 1",
-              // animationFillMode: "forwards",
-              // "@keyframes swipeImage": {
-              //   "0%": {
-              //     transform: "translateX(100%)",
-              //     opacity: 0,
-              //   },
-              //   "20%": {
-              //     transform: "translateX(100%)",
-              //     opacity: 0,
-              //   },
-              //   "40%": {
-              //     transform: "translateX(0%)",
-              //     opacity: 1,
-              //   },
-              //   "60%": {
-              //     transform: "translateX(0%)",
-              //     opacity: 1,
-              //   },
-              //   "100%": {
-              //     transform: "translateX(-600%)",
-              //     opacity: 0,
-              //   },
-              // },
-            }}
-          >
-            <img
-              alt="ZafsPacket"
-              src={Zafs_packet}
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                display: "none",
+          <Box sx={{ paddingRight: { md: "30px" } }}>
+            <Typography
+              sx={{
+                fontSize: "18px",
+                fontWeight: 400,
+                color: "#55443D",
+                mb: "25px",
               }}
-            />
+            >
+              When it comes to vibing with a beverage in India, it has to be
+              chai. At Zafar, we blend tradition, joy, and taste to unite
+              communities with love. From classic chai to exotic herbal
+              infusions, each sip at Zafar is filled with freshness, flavor that
+              you find difficult to resist.
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: "18px",
+                fontWeight: 400,
+                color: "#55443D",
+                mb: "25px",
+              }}
+            >
+              We are more than just a tea cafe; we endeavor to serve an
+              experience to help friends connect, families unwind, and
+              individuals find solace. Step into the soothing ambiance and
+              attentive service that feels like a home away from home.
+            </Typography>
           </Box>
+        </Box>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+          <img
+            alt="Home"
+            src={
+              "https://aradhanahospitality.com/demo/wp-content/uploads/2024/02/aradhana-1-2.jpg"
+            }
+            width="100%"
+            height="450px"
+            style={{
+              objectFit: "contain",
+            }}
+          />
         </Box>
       </Box>
       <Box
@@ -162,6 +148,7 @@ const ZafsMore = () => {
             }}
           />
         </Box>
+
         <Box
           sx={{
             width: { xs: "100%", md: "50%" },
@@ -393,6 +380,59 @@ const ZafsMore = () => {
             </Box>
           </Box>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          p: {
+            xs: "40px",
+            md: "60px",
+            lg: "70px 100px",
+            xl: "80px 140px",
+          },
+          bgcolor: "#F1F1F1",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "30px",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "25px",
+            fontWeight: "400",
+            color: "#ed641a",
+            textAlign: "center",
+          }}
+        >
+          Want to franchise with us?
+        </Typography>
+
+        <Typography
+          sx={{
+            fontSize: "30px",
+            fontWeight: "600",
+            color: "#151515",
+            textAlign: "center",
+          }}
+        >
+          Request a free franchise consultation
+        </Typography>
+        <Button
+          variant="contained"
+          sx={{
+            bgcolor: "#151515",
+            borderRadius: "8px",
+            height: { xs: "36px", sm: "46px", md: "56px" },
+            width: { xs: "140px", sm: "160px", md: "180px" },
+            fontSize: { xs: "12px", sm: "14px", md: "16px" },
+            fontWeight: "600",
+            "&:hover": {
+              backgroundColor: "#ED641A",
+            },
+          }}
+        >
+          Apply now
+        </Button>
       </Box>
     </>
   );

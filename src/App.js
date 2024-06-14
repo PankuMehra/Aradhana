@@ -7,6 +7,7 @@ import ContactUs from "./component/Pages/ContactUs/ContactUS";
 import ZafersMore from "./component/Pages/Zafers/ZafersMore";
 import ZafsMore from "./component/Pages/Zafs/ZafsMore";
 import Blog from "./component/Pages/Blog/Blog";
+import ScrollToTop from "react-scroll-to-top";
 
 const App = () => {
   // const homeRef = useRef(null);
@@ -17,24 +18,12 @@ const App = () => {
   // const contactRef = useRef(null);
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <AppLayout
-          // homeRef={homeRef}
-          // aboutRef={aboutRef}
-          // zafersRef={zafersRef}
-          // zafsRef={zafsRef}
-          // blogRef={blogRef}
-          // contactRef={contactRef}
-          />
-        }
-      >
+    <>
+      <Routes>
         <Route
-          index
+          path="/"
           element={
-            <Main
+            <AppLayout
             // homeRef={homeRef}
             // aboutRef={aboutRef}
             // zafersRef={zafersRef}
@@ -43,14 +32,29 @@ const App = () => {
             // contactRef={contactRef}
             />
           }
-        />
-        <Route path="about" element={<MoreAboutUs />} />
-        <Route path="zafars" element={<ZafersMore />} />
-        <Route path="zafs" element={<ZafsMore />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="contact" element={<ContactUs />} />
-      </Route>
-    </Routes>
+        >
+          <Route
+            index
+            element={
+              <Main
+              // homeRef={homeRef}
+              // aboutRef={aboutRef}
+              // zafersRef={zafersRef}
+              // zafsRef={zafsRef}
+              // blogRef={blogRef}
+              // contactRef={contactRef}
+              />
+            }
+          />
+          <Route path="about" element={<MoreAboutUs />} />
+          <Route path="zafars" element={<ZafersMore />} />
+          <Route path="zafs" element={<ZafsMore />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="contact" element={<ContactUs />} />
+        </Route>
+      </Routes>
+      <ScrollToTop style={{ zIndex: 99999 }} smooth />
+    </>
   );
 };
 
