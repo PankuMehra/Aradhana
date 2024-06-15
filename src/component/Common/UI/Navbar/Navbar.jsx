@@ -90,7 +90,7 @@ const Navbar = () =>
     const navItems = [
       { label: "Home", ref: "" },
       { label: "About Us", ref: "about" },
-      { label: "Zafer's", ref: "zafars" },
+      { label: "Zafar's", ref: "zafars" },
       { label: "Zafs", ref: "zafs" },
       { label: "Blog", ref: "blog" },
       { label: "Contact Us", ref: "contact" },
@@ -118,7 +118,7 @@ const Navbar = () =>
               },
           position: "sticky",
           top: 0,
-          zIndex: 99999,
+          zIndex: 999,
           transition: "padding 0.3s ease, background-color 0.3s ease",
         }}
       >
@@ -177,7 +177,7 @@ const Navbar = () =>
           sx={{
             "& .MuiDrawer-paper": {
               bgcolor: "rgba(0, 0, 0, 0.8)",
-              width: "50%",
+              width: "100%",
               color: "#ed641a",
               bgcolor: "white",
             },
@@ -189,10 +189,16 @@ const Navbar = () =>
               justifyContent: "space-between",
               bgcolor: "#352D29",
               p: 2,
+              zIndex: 9999
             }}
           >
             <Box sx={{ cursor: "pointer" }} onClick={() => handleNavClick("")}>
-              <Logo />
+              <img
+                src="https://aradhanahospitality.com/demo/wp-content/uploads/2024/02/Aradhana-White.svg"
+                alt="logo"
+                srcset=""
+                width={"90px"}
+              />
             </Box>
             <IconButton onClick={toggleDrawer(false)}>
               <CloseIcon
