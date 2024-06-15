@@ -104,7 +104,7 @@ const Footer = () => {
             textTransform: "uppercase",
             gap: {
               xs: "10px",
-              md: 4,
+              md: 3,
             },
             flexWrap: { xs: "wrap" },
           }}
