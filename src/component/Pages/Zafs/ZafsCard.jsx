@@ -4,7 +4,16 @@ import { ZafsEssence } from "../../Common/assets/Icons";
 
 const ZafsCard = () => {
   return (
-    <Box sx={{ display: "flex", gap: "6px", bgcolor: "#FFFFFF", p: "20px 15px" }}>
+    <Box
+      sx={{
+        display: "flex",
+        gap: "6px",
+        bgcolor: "#FFFFFF",
+        p: "20px 15px",
+        borderRadius: "10px",
+        zIndex: 9999,
+      }}
+    >
       <Box>
         <Typography
           sx={{ fontSize: "24px", fontWeight: "700", color: "#55443D" }}

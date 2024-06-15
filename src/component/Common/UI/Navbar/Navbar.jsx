@@ -90,7 +90,7 @@ const Navbar = () =>
     const navItems = [
       { label: "Home", ref: "" },
       { label: "About Us", ref: "about" },
-      { label: "Zafer's", ref: "zafars" },
+      { label: "Zafar's", ref: "zafars" },
       { label: "Zafs", ref: "zafs" },
       { label: "Blog", ref: "blog" },
       { label: "Contact Us", ref: "contact" },
@@ -105,16 +105,16 @@ const Navbar = () =>
           bgcolor: isScrolled ? "rgba(0, 0, 0, 0.5)" : "transparent",
           p: isScrolled
             ? {
-                xs: "25px 30px",
-                sm: "25px 45px",
-                md: "25px 60px",
-                lg: "25px 200px",
+                xs: "15px 30px 10px",
+                sm: "15px 45px 10px",
+                md: "15px 60px 10px",
+                lg: "15px 200px 10px",
               }
             : {
-                xs: "20px 25px",
-                sm: "20px 40px",
-                md: "20px 50px",
-                lg: "20px 200px",
+                xs: "15px 30px 10px",
+                sm: "15px 45px 10px",
+                md: "15px 60px 10px",
+                lg: "15px 200px 10px",
               },
           position: "sticky",
           top: 0,
@@ -123,7 +123,13 @@ const Navbar = () =>
         }}
       >
         <Box sx={{ cursor: "pointer" }} onClick={() => handleNavClick("")}>
-          <Logo />
+          {/* <Logo /> */}
+          <img
+            src="https://aradhanahospitality.com/demo/wp-content/uploads/2024/02/Aradhana-White.svg"
+            alt="logo"
+            srcset=""
+            width={"90px"}
+          />
         </Box>
         <Box
           sx={{
@@ -131,7 +137,7 @@ const Navbar = () =>
             justifyContent: "space-around",
             alignItems: "center",
             textTransform: "uppercase",
-            width: { md: "70%", lg: "60%" },
+            width: { md: "60%", lg: "50%" },
           }}
         >
           {navItems.map((item, index) => (
@@ -183,10 +189,16 @@ const Navbar = () =>
               justifyContent: "space-between",
               bgcolor: "#352D29",
               p: 2,
+              zIndex: 9999
             }}
           >
             <Box sx={{ cursor: "pointer" }} onClick={() => handleNavClick("")}>
-              <Logo />
+              <img
+                src="https://aradhanahospitality.com/demo/wp-content/uploads/2024/02/Aradhana-White.svg"
+                alt="logo"
+                srcset=""
+                width={"90px"}
+              />
             </Box>
             <IconButton onClick={toggleDrawer(false)}>
               <CloseIcon

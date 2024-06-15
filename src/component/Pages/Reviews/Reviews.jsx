@@ -7,7 +7,9 @@ const Reviews = () => {
   return (
     <Box
       sx={{
-        bgcolor: "#484F3C",
+        backgroundImage: "url('https://i.ibb.co/KrDttPd/Rectangle-7.png')",
+        backgroundSize: "100%",
+        // "url('../../Common/assets/Images/Reviewers/ReviewBG.png')",
         p: { xs: "20px 0px", sm: "40px 0px", md: "60px 0px", lg: "120px 0px" },
         overflow: "hidden",
       }}

@@ -370,21 +370,13 @@ const ContactUs = () => {
                   {!submitLoader ? (
                     <Button
                       variant="contained"
-                      type="submit"
                       sx={{
                         bgcolor: "#ED641A",
-                        borderRadius: "5px",
-                        width: {
-                          xs: "160px",
-                          sm: "180px",
-                          md: "200px",
-                          lg: "220px",
-                        },
-                        fontSize: {
-                          xs: "16px",
-                          lg: "20px",
-                        },
-                        fontWeight: 600,
+                        borderRadius: "8px",
+                        height: { xs: "36px", sm: "46px", md: "56px" },
+                        width: { xs: "140px", sm: "160px", md: "180px" },
+                        fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                        fontWeight: "600",
                         "&:hover": {
                           backgroundColor: "#d75f1e",
                         },

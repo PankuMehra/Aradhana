@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import ZafsPacket from "../../Common/assets/Images/Zafs/Zafs_packet.png";
+import bgDesign from "../../Common/assets/Images/Zafs/background-design.png";
 import ZafsCard from "./ZafsCard";
 
 const Zafs = () => {
@@ -8,6 +9,7 @@ const Zafs = () => {
     <Box
       sx={{
         bgcolor: "#55443D",
+        position: "relative",
         p: {
           xs: "20px 40px",
           sm: "40px",
@@ -15,8 +17,15 @@ const Zafs = () => {
           lg: "70px 100px",
           xl: "70px 140px",
         },
+        zIndex: 9999,
       }}
     >
+      <img
+        src={bgDesign}
+        width={"100%"}
+        style={{ position: "absolute", bottom: "0", left: "0", zIndex: 0 }}
+        alt=""
+      />
       <Box
         sx={{
           display: "flex",
@@ -24,6 +33,7 @@ const Zafs = () => {
           justifyContent: "flex-start",
           gap: { xs: 2, sm: 4, md: "8%" },
           mb: { xs: "40px", sm: "60px", md: "80px" },
+          zIndex: 9999,
         }}
       >
         <Box width={{ xs: "100%", md: "60%" }}>
@@ -33,6 +43,7 @@ const Zafs = () => {
               alignItems: "center",
               gap: "30px",
               mb: "50px",
+              zIndex: 9999,
             }}
           >
             <Typography
@@ -84,6 +95,7 @@ const Zafs = () => {
           width={{ xs: "100%", md: "35%" }}
           sx={{
             mt: { xs: "20px", md: "0" },
+            zIndex: 9999,
           }}
         >
           <img
@@ -93,6 +105,7 @@ const Zafs = () => {
               width: "100%",
               objectFit: "cover",
               borderRadius: "8px",
+              zIndex: 9999,
             }}
           />
         </Box>
@@ -107,6 +120,7 @@ const Zafs = () => {
           },
           // flexDirection: { xs: "column", md: "row" },
           gap: "30px",
+          zIndex: 9999,
         }}
       >
         <ZafsCard />

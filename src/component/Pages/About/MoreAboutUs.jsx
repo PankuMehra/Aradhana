@@ -148,7 +148,7 @@ const MoreAboutUs = () => {
           justifyItems: "center",
           justifyContent: "center",
           gap: "30px",
-          p: { xs: "20px", sm: "40px", md: "60px" },
+          p: { xs: "20px", sm: "40px", md: "60px 60px 20px 60px;" },
         }}
       >
         <Box sx={{ width: { xs: "90%", sm: "60%", md: "70%" } }}>
