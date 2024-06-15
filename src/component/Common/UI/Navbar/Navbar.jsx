@@ -111,9 +111,9 @@ const Navbar = () =>
                 lg: "15px 200px 10px",
               }
             : {
-                xs: "15px 25px 10px",
-                sm: "15px 40px 10px",
-                md: "15px 50px 10px",
+                xs: "15px 30px 10px",
+                sm: "15px 45px 10px",
+                md: "15px 60px 10px",
                 lg: "15px 200px 10px",
               },
           position: "sticky",

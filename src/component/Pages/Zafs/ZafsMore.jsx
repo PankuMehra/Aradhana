@@ -4,6 +4,7 @@ import ZaferBG from "../../Common/assets/Images/Zafers/Zafer_BG.jpg";
 import mission from "../../Common/assets/Images/Zafers/mission.png";
 import Corousel from "../../Common/UI/Corousel";
 import zaf from "../../Common/assets/Images/Zafs/zaf.jpg";
+import zaf_logo from "../../Common/assets/Images/Zafs/Zaf_logo.png";
 import deliveryboy from "../../Common/assets/Images/Zafers/dilveryboy.png";
 import zomato from "../../Common/assets/Images/Zafers/zomato-logo.png";
 import swiggy from "../../Common/assets/Images/Zafers/swiggy-logo.png";
@@ -34,6 +35,17 @@ const ZafsMore = () => {
   return (
     <>
       <Box sx={{ position: "relative", height: "800px" }}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "200px",
+            left: { xs: "30%" },
+            width: "40%",
+            zIndex: 99999,
+          }}
+        >
+          <img src={zaf_logo} width={"100%"} alt="zaf_logo" />
+        </Box>
         <Carousel
           cycleNavigation="true"
           animation="slide"
@@ -192,121 +204,7 @@ const ZafsMore = () => {
           </Box>
         </Box>
       </Box>
-      {/* <Box
-        sx={{
-          background: "white",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          p: { xs: "30px", sm: "50px", md: "70px" },
-        }}
-      >
-        <Box
-          sx={{
-            background: "white",
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "30px",
-          }}
-        >
-          <Box
-            sx={{
-              width: { xs: "100%", md: "50%" },
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-              gap: "40px",
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: { xs: "36px", md: "40px" },
-                fontWeight: "600",
-                color: "#000",
-              }}
-            >
-              <span style={{ color: "#ED641A" }}>Our</span> Products
-            </Typography>
-            <Box sx={{ paddingRight: "30px" }}>
-              <Typography
-                sx={{ color: "#151515", fontSize: { xs: "16px", md: "20px" } }}
-              >
-                Experience the convenience of Zaf's ready-to-make tea products
-                that bring the art of tea brewing at your fingertips. Our
-                innovative tea solutions are designed for the modern tea
-                enthusiast who values both quality and convenience. Elevate your
-                tea rituals with Zaf's premium tea offerings, making every
-                moment count with flavorful sips.
-              </Typography>
-            </Box>
-          </Box>
-          <Box sx={{ width: { xs: "100%", md: "unset" } }}>
-            <img
-              alt="Home"
-              src={mission}
-              width="100%"
-              height="300px"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            background: "white",
-            display: "flex",
-            flexDirection: { xs: "column-reverse", md: "row" },
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "30px",
-          }}
-        >
-          <Box sx={{ width: { xs: "100%", md: "unset" } }}>
-            <img
-              alt="Home"
-              src={mission}
-              width="100%"
-              height="300px"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </Box>
-          <Box
-            sx={{
-              width: { xs: "100%", md: "50%" },
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-              gap: "40px",
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: { xs: "36px", md: "40px" },
-                fontWeight: "600",
-                color: "#000",
-              }}
-            >
-              <span style={{ color: "#ED641A" }}>Join the</span> Zaf Community
-            </Typography>
-            <Box sx={{ paddingRight: "30px" }}>
-              <Typography
-                sx={{ color: "#151515", fontSize: { xs: "16px", md: "20px" } }}
-              >
-                At Zaf, we believe in fostering a global community of tea lovers
-                who appreciate the beauty and diversity of tea. Become part of
-                the Zaf family as we embark on a journey to serve exceptional
-                experience with your cup of tea.
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
-      </Box> */}
+
       <Box
         sx={{
           background: "white",
@@ -366,6 +264,7 @@ const ZafsMore = () => {
                 height="40px"
                 style={{
                   objectFit: "contain",
+                  borderRadius: "10px",
                 }}
               />
               <img
@@ -375,6 +274,7 @@ const ZafsMore = () => {
                 height="40px"
                 style={{
                   objectFit: "contain",
+                  borderRadius: "10px",
                 }}
               />
             </Box>

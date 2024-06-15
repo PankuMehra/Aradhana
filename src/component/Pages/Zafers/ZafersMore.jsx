@@ -12,6 +12,8 @@ import HomeBG from "../../Common/assets/Images/HomeBG.png";
 import Carousel from "react-material-ui-carousel";
 import CommonCarousel from "component/Common/Carousel/CommonCarousel";
 // import TestimonialCard from "./TestimonialCard";
+import ZaferLogo from "../../Common/assets/Images/Zafers/Zafar_Tea_logo.png";
+import zIndex from "@mui/material/styles/zIndex";
 
 const ZafersMore = () => {
   var items = [
@@ -34,6 +36,17 @@ const ZafersMore = () => {
   return (
     <Box>
       <Box sx={{ position: "relative", height: "800px" }}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "200px",
+            left: { xs: "20%" },
+            width: "60%",
+            zIndex: 99999,
+          }}
+        >
+          <img src={ZaferLogo} width={"100%"} alt="zaf_logo" />
+        </Box>
         <Carousel
           cycleNavigation="true"
           animation="slide"
@@ -241,6 +254,7 @@ const ZafersMore = () => {
                 height="40px"
                 style={{
                   objectFit: "contain",
+                  borderRadius: "10px",
                 }}
               />
               <img
@@ -250,6 +264,7 @@ const ZafersMore = () => {
                 height="40px"
                 style={{
                   objectFit: "contain",
+                  borderRadius: "10px",
                 }}
               />
             </Box>
